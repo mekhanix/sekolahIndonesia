@@ -2,9 +2,11 @@ form {
     margin-top: 25px;
 }
 
-select {
+.form-control {
     margin-right: 10px;
 }
+
+
 
 .hasil {
     margin-top: 25px;

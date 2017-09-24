@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {Typeahead, AsyncTypeahead} from 'react-bootstrap-typeahead';
+import axios from 'axios';
 class Search extends Component {
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
             options:[]
         }
@@ -16,14 +18,20 @@ class Search extends Component {
 
     render(){
         return(
+            
             <div className="container search">
-
                 <form className="form-inline">
-
-                    <select onChange={this.props.handleChangeKode} className="form-control">
+                    {/* <select onChange={this.props.handleChangeKode} className="form-control">
                         {this.props.kode_wilayah.map(val=> <option key={val.kode_wilayah} value={val.kode_wilayah}>{val.nama}</option>)}
-                    </select>
-
+                    </select> */}
+                    <AsyncTypeahead
+                    labelKey="nama"
+                    onSearch={this.props.handleSearch}
+                    onChange={this.props.handleChange}
+                    options = {this.props.kode_wilayah}
+                    placeholder = "cari sekolah..."
+                    maxResults={1000}
+                    />
                     <select onChange={this.props.handleChangeTingkat} className="form-control">
                         <option value="sd">SD</option>
                         <option value="smp">SMP</option>
