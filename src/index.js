@@ -23,7 +23,7 @@ class Index extends Component {
                 sekolah_list:resp.data.data,
                 selected_sekolah : resp.data.data[0]
             })
-            console.log(resp.data.data)
+            // console.log(resp.data.data)
         })
     }
 
@@ -35,6 +35,7 @@ class Index extends Component {
             }, ()=>{this.fetchListSekolah()})
         })
     }
+
 
     handleChangeKode(e){
         e.preventDefault()
@@ -58,6 +59,12 @@ class Index extends Component {
         })
     }
 
+    handleSearch(){
+        axios.get('http://jendela.data.kemdikbud.go.id/api/index.php/cwilayah/wilayahKabGet')
+        .then((resp)=>{
+            this.setState({kode_wilayah: resp.data.data})
+        })
+    }
 
     render(){
         return(
@@ -69,7 +76,7 @@ class Index extends Component {
             listSekolah={this.state.sekolah_list}
             fetchListSekolah = {this.fetchListSekolah.bind(this)}
             handleChangeSekolah = {this.handleChangeSekolah.bind(this)}
-
+            handleSearch = {this.handleSearch.bind(this)}
              />
              <Hasil selected_sekolah={this.state.selected_sekolah} />
             </div>
