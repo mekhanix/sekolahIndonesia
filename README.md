@@ -11,7 +11,7 @@ semua Data diperoleh dari [Kemdikbud Indonesia](http://jendela.data.kemdikbud.go
 ### installation:
 ```
 > git clone https://github.com/mekhanix/sekolahIndonesia.git
-> cd ReduxSimpleStarter
+> cd sekolahIndonesia
 > npm install
 > npm start
 ```
