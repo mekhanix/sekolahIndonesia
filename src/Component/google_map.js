@@ -7,7 +7,7 @@ const MapMarker = (withGoogleMap)(
         console.log(parseFloat(props.lng,10))
         return (
             <GoogleMap 
-            defaultZoom={18}
+            defaultZoom={17}
             center={{ lat: parseFloat(props.lat,10), lng:  parseFloat(props.lng,10) }}
             >
             <Marker
@@ -38,10 +38,10 @@ class GMap extends Component{
                 lat={this.props.lat}
                 lng={this.props.lng}
                 containerElement={
-                  <div style={{ height: `500px` }} />
+                  <div style={{ height: `500px`, width: `500px` }} />
                 }
                 mapElement={
-                  <div style={{ height: `500px` }} />
+                  <div style={{ height: `500px`, width: `500px` }} />
                 }
             />
     }
