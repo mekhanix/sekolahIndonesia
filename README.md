@@ -1,7 +1,7 @@
-###Daftar Sekolah Indonesia
+### Daftar Sekolah Indonesia
 semua Data diperoleh dari [Kemdikbud Indonesia](http://jendela.data.kemdikbud.go.id/jendela/).
 
-##dependencies :
+## dependencies :
 ..- axios
 ..- lodash
 ..- react-bootstrap-typeahead
