@@ -8,6 +8,11 @@ semua Data diperoleh dari [Kemdikbud Indonesia](http://jendela.data.kemdikbud.go
 - react-google-maps
 - whatwg-fetch
 
+### install dependencies:
+```npm install```
+```npm start```
+
+
 untuk pengguna chrome/ubuntu jalankan perintah berikut pada terminal : 
 ```google-chrome --disable-web-security --user-data-dir```
 
