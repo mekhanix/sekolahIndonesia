@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Typeahead, AsyncTypeahead} from 'react-bootstrap-typeahead';
-import axios from 'axios';
+import {AsyncTypeahead} from 'react-bootstrap-typeahead';
+
 class Search extends Component {
     constructor(props){
         super(props);

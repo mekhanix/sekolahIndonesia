@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Search from './Component/Search';
-import axios from 'axios';
 import Hasil from './Component/Hasil';
+import axios from 'axios';
 import _ from 'lodash';
 class Index extends Component {
     constructor(props){
@@ -92,6 +92,7 @@ class Index extends Component {
 
              />
              <Hasil selected_sekolah={this.state.selected_sekolah} />
+             
             </div>
         )
     }
