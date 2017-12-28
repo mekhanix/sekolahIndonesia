@@ -1,0 +1,18 @@
+{
+  "name": "sekolah_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Miftah",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "nodemon": "^1.14.3"
+  }
+}

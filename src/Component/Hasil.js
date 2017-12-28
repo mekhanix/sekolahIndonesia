@@ -1,27 +1,27 @@
-import React, {Component} from 'react';
-import GMap from './google_map';
-class Hasil extends Component {
-    static defaultProps = {
-        center: {lat: 59.95, lng: 30.33},
-        zoom: 5
-      };
-    render(){
-        if (!this.props.selected_sekolah) {
-            return (
-                <div>loading...</div>
-            )
-        }
-        return(
-        <div className="container">
-            <h3>{this.props.selected_sekolah.sekolah}</h3>
-            
-            <h4>Alamat : {this.props.selected_sekolah.alamat_jalan}</h4>
-            <h4>Provinsi : {this.props.selected_sekolah.propinsi}</h4>
-            <h4>Kabupaten Kota : {this.props.selected_sekolah.kabupaten_kota}</h4>
-            <h4>Kecamatan: {this.props.selected_sekolah.kecamatan}</h4>
-            <GMap lat={this.props.selected_sekolah.lintang} lng={this.props.selected_sekolah.bujur}/>
-        </div>
+import React from 'react'
+import GMap from './google_map'
+
+const Hasil = (props)=>{
+    if (!props.selectedSekolah) {
+        return (
+            <div>
+                
+            </div>
         )
     }
+    return (
+        <div>
+            <div className="container">
+                <h3>{props.selectedSekolah.sekolah}</h3>
+            
+                <h4>Alamat : {props.selectedSekolah.alamat_jalan}</h4>
+                <h4>Provinsi : {props.selectedSekolah.propinsi}</h4>
+                <h4>Kabupaten Kota : {props.selectedSekolah.kabupaten_kota}</h4>
+                <h4>Kecamatan: {props.selectedSekolah.kecamatan}</h4>
+                <GMap lat={props.selectedSekolah.lintang} lng={props.selectedSekolah.bujur}/>
+            </div>
+        </div>
+    )
 }
+
 export default Hasil
